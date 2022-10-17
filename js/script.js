@@ -1,4 +1,4 @@
-import { API_KEY } from "./api.js";
+import API_KEY from "./api.js";
 
 const locationInput = document.getElementById('location-input')
 const searchButton = document.getElementById('btn');
