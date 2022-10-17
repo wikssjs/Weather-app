@@ -1,3 +1,5 @@
+import { API_KEY } from "./api.js";
+
 const locationInput = document.getElementById('location-input')
 const searchButton = document.getElementById('btn');
 const location = document.getElementById('location');
@@ -25,7 +27,7 @@ function getData(){
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '1a1dd8d20amsh9f57cb9363b78d2p1d9416jsnef806e1b3281',
+            'X-RapidAPI-Key': API_KEY,
             'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
         }
     };
