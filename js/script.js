@@ -41,6 +41,11 @@ function getData(){
         .catch(err => console.error(err));
     }
     
+
+
+
+
+    
     function setData(response){
         if(response.current!=null){
         location.innerText = `${response.location.name},${response.location.region},${response.location.country}`,
