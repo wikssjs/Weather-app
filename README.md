@@ -1,6 +1,6 @@
 # Weather-app
 
-![](/img.main.png)
+![](/img/main.png)
 
 ## Description
 
