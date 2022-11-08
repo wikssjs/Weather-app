@@ -12,6 +12,8 @@ const visibility = document.getElementById('visibility');
 const uv = document.getElementById('uv');
 const feelslike = document.getElementById('feelslike');
 
+const image = document.querySelector('#image');
+
 
 locationInput.value = 'ottawa'
 getData();
@@ -22,7 +24,6 @@ searchButton.addEventListener('click',getData);
 
 /**
  * 
- * @param {String} locationVar 
  */
 function getData(){
     let locationVar = locationInput.value;
@@ -37,20 +38,24 @@ function getData(){
     fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${locationVar}`, options)
 	.then(response => response.json())
 	.then(response =>setData(response),
-       locationInput.value=""
-        
-        )
-        .catch(err => console.error(err));
+       locationInput.value="",
+       
+       )
+       .catch(err => console.error(err));
     }
     
-
-
-
-
+    
+    
+    
+    
     
     function setData(response){
+        console.log('https:'+response.current.condition.icon)
         if(response.current!=null){
         location.innerText = `${response.location.name},${response.location.region},${response.location.country}`,
+        location.classList.add('text-warning')
+        location.classList.remove('text-danger')
+        image.src = 'https:'+response.current.condition.icon;
         temperature.innerText = response.current.temp_c +' °C'
         condition.innerText = response.current.condition.text
         wind.innerText = `${response.current.wind_kph} KM/H`
@@ -60,9 +65,11 @@ function getData(){
         uv.innerText  = `${response.current.uv}`
         feelslike.innerText = `${response.current.feelslike_c} °C`
         }
+        
         else{
         location.innerText = response.error.message;
         location.classList.add('text-danger')
+        location.value = "Location is missing"
         temperature.innerText = ''
         condition.innerText = ''
         wind.innerText = ''
