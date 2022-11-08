@@ -18,6 +18,8 @@ getData();
 
 
 searchButton.addEventListener('click',getData);
+
+
 /**
  * 
  * @param {String} locationVar 
