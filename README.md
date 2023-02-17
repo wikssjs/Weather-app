@@ -2,11 +2,11 @@
 
 ![](/img/main.png)
 
-## Description
+# Description
 
 This is a Weather app i have created using an api for weather info 
 
-* [Portfolio](https://james-worldweather.netlify.app) Link
+* [Weather Website](https://james-worldweather.netlify.app) Link
 
 ## Licence
 
