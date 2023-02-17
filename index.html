@@ -8,6 +8,7 @@
     <title>Weather</title>
     <link rel="icon" href="./img/page_icon.png">
 
+    <link rel="stylesheet" href="/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -16,56 +17,132 @@
     <script type="module" src="./js/script.js"></script>
 </head>
 
-<body class=" bg-dark mh-75 " style="max-height: 50%;">
-    <div class="container d-flex align-items-end flex-row justify-content-center w-75">
-        <div class="form-group w-100 d-flex flex-column align-items-center">
-            <label for="exampleFormControlInput1" class="text-white fw-bold fs-4">Location</label>
-            <input type="email" class="form-control" id="location-input" placeholder="Ottawa">
-        </div>
-        <button type="button" class="btn btn-primary " id="btn">Search</button>
+<body class="container-fluid py-5 px-5">
 
-        
-    </div>
+    <div class="page_container d-flex bg-dark">
 
-    <div class="h1 text-warning text-center p-5" id="location">
-    </div>
-
-    <div class="container bg-info rounded-1 text-center border border-warning" style="height:500px">
-        <div class="h2">
-        </div>
-        <div class="container d-md-flex text-center">
-
-            <div class="container">
-                <div class="h3" id="temperature">
-                </div>
-                <img src="" alt="" id="image" width="100">
-                <div class="h4" id="condition">
-                </div>
-
-
-                <div class="container d-md-flex">
-
-                    <div class="container">
-                        <pre class="h4">Wind: <span id="wind"></span></pre>
-                        <pre class="h4">Humidity: <span id="humidity"></span></pre>
-                        <pre class="h4">Presure: <span id="presure"></span></pre>
-                    </div>
-
-                    <div class="container">
-                        <pre class="h4">Visibility: <span id="visibility"></span></pre>
-
-                        <pre class="h4">Uv: <span id="uv"></span></pre>
-
-                        <pre class="h4">Feelslike: <span id="feelslike"></span></pre>
-                    </div>
-                </div>
+        <div class="weather-container">
+            <div class="weather-icon">
+                <i class="fas fa-sun"></i>
+            </div>
+            <div class="weather-info">
+                <div class="temp">72&#176;F</div>
+                <div class="desc">Sunny</div>
+                <div class="location">New York City</div>
             </div>
         </div>
-        <div class="d-none d-lg-block">
-            <img src="./img/cute-3d-cartoon-weather-icons-set-sun-moon-star-lightning-cloud-rain-drops_363543-517-removebg-preview.png"
-                class="" alt="">
+        
+        <div class="d-flex flex-column justify-content-around w-100 align-items-center">
+            <div class="forecast-container">
+                <div class="forecast-card">
+                    <div class="day">Mon</div>
+                    <i class="fas fa-sun forecast-icon"></i>
+                    <div class="temp">74&#176;F</div>
+                </div>
+                <div class="forecast-card">
+                    <div class="day">Tue</div>
+                    <i class="fas fa-cloud-sun forecast-icon"></i>
+                    <div class="temp">68&#176;F</div>
+                </div>
+                <div class="forecast-card">
+                    <div class="day">Wed</div>
+                    <i class="fas fa-cloud forecast-icon"></i>
+                    <div class="temp">62&#176;F</div>
+                </div>
+                <div class="forecast-card">
+                    <div class="day">Thu</div>
+                    <i class="fas fa-cloud-showers-heavy forecast-icon"></i>
+                    <div class="temp">55&#176;F</div>
+                </div>
+                <div class="forecast-card">
+                    <div class="day">Fri</div>
+                    <i class="fas fa-cloud-rain forecast-icon"></i>
+                    <div class="temp">51&#176;F</div>
+                </div>
+                <div class="forecast-card">
+                    <div class="day">Sat</div>
+                    <i class="fas fa-cloud-meatball forecast-icon"></i>
+                    <div class="temp">49&#176;F</div>
+                </div>
+                <div class="forecast-card">
+                    <div class="day">Sun</div>
+                    <i class="fas fa-sun forecast-icon"></i>
+                    <div class="temp">55&#176;F</div>
+                </div>
+            </div>
+            <div class="d-flex flex-column align-items-center gap-5">
+                
+                <h1 class="text-white">Today's Highlights</h1>
+                <div class="weather-details-container container row">
+                    <div class="weather-detail-card col-md-3 gap-">
+                        <div class="weather-detail-icon">
+                            <i class="wi wi-humidity"></i>
+                        </div>
+                        <div class="weather-detail-info">
+                            <div class="weather-detail-label">Humidity</div>
+                            <div class="weather-detail-value">56%</div>
+                        </div>
+                    </div>
+
+                    <div class="weather-detail-card col-md-3">
+                        <div class="weather-detail-icon">
+                            <i class="wi wi-strong-wind"></i>
+                        </div>
+                        <div class="weather-detail-info">
+                            <div class="weather-detail-label">Wind</div>
+                            <div class="weather-detail-value">11 km/h</div>
+                        </div>
+                    </div>
+    
+                    <div class="weather-detail-card col-md-3">
+                        <div class="weather-detail-icon">
+                            <i class="wi wi-strong-wind"></i>
+                        </div>
+                        <div class="weather-detail-info">
+                            <div class="weather-detail-label">Wind</div>
+                            <div class="weather-detail-value">11 km/h</div>
+                        </div>
+                    </div>
+    
+                    <div class="weather-detail-card col-md-3">
+                        <div class="weather-detail-icon">
+                            <i class="wi wi-strong-wind"></i>
+                        </div>
+                        <div class="weather-detail-info">
+                            <div class="weather-detail-label">Wind</div>
+                            <div class="weather-detail-value">11 km/h</div>
+                        </div>
+                    </div>
+    
+                    <div class="weather-detail-card col-md-3">
+                        <div class="weather-detail-icon">
+                            <i class="wi wi-strong-wind"></i>
+                        </div>
+                        <div class="weather-detail-info">
+                            <div class="weather-detail-label">Wind</div>
+                            <div class="weather-detail-value">11 km/h</div>
+                        </div>
+                    </div>
+
+                    <div class="weather-detail-card col-md-3">
+                        <div class="weather-detail-icon">
+                            <i class="wi wi-strong-wind"></i>
+                        </div>
+                        <div class="weather-detail-info">
+                            <div class="weather-detail-label">Wind</div>
+                            <div class="weather-detail-value">11 km/h</div>
+                        </div>
+                    </div>
+    
+                    
+                </div>
+            </div>
+           
         </div>
+
     </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 
 </html>

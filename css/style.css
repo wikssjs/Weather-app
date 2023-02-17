@@ -1,0 +1,167 @@
+
+    .page_container{
+        height: 90vh;
+        border-radius: 50px;
+    }
+
+.weather-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #4B4E6D;
+}
+
+.weather-icon {
+    font-size: 10rem;
+    color: #fff;
+    margin-right: 30px;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+}
+
+.temp {
+    font-size: 5rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.forecast-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+    width: 80%;
+}
+
+
+.forecast-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #4B4E6D;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 150px;
+    height: 150px;
+}
+
+.forecast-card .day {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.forecast-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .weather-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .weather-icon {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .forecast-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .forecast-card {
+        margin: 10px;
+    }
+}
+
+.weather-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.weather-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.weather-detail i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.weather-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.weather-value {
+    font-size: 1.5rem;
+}
+
+
+.weather-details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .weather-detail-card {
+    display: flex;
+    align-items: center;
+    width: calc(20% - 10px);
+    height: 100px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+  
+  .weather-detail-icon {
+    font-size: 2rem;
+    margin-right: 10px;
+  }
+  
+  .weather-detail-info {
+    text-align: center;
+  }
+  
+  .weather-detail-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .weather-detail-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  
+  
