@@ -17,70 +17,54 @@
     <script type="module" src="./js/script.js"></script>
 </head>
 
-<body class="container-fluid py-5 px-5">
+<body class="px-lg-5 bg-primary py-lg-5">
 
-    <div class="page_container d-flex bg-dark">
+    <div class="page_container shadow-lg rounded-5 d-flex  bg-dark mb-5">
 
         <div class="weather-container">
-            <div class="weather-icon">
-                <i class="fas fa-sun"></i>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control p-3" id="location-input" placeholder="Search for...">
+                <button class="btn btn-primary btn-lg" type="button" id="btn">Search</button>
             </div>
-            <div class="weather-info">
-                <div class="temp">72&#176;F</div>
-                <div class="desc">Sunny</div>
-                <div class="location">New York City</div>
+            <div class=" h-25  justify-content-center">
+                <div class="weather-icon">
+                    <img src="" alt="" id="image">
+                </div>
+                <div class="weather-info">
+                    <div class="temp" id="temperature">72&#176;F</div>
+                    <div class="desc" id="condition">Sunny</div>
+                    <div class="location" id="location">New York City</div>
+                </div>
+            </div>
+
+            <div class="ilus">
+                <img src="./img/ilus.png" alt="">
             </div>
         </div>
-        
-        <div class="d-flex flex-column justify-content-around w-100 align-items-center">
-            <div class="forecast-container">
-                <div class="forecast-card">
-                    <div class="day">Mon</div>
-                    <i class="fas fa-sun forecast-icon"></i>
-                    <div class="temp">74&#176;F</div>
-                </div>
-                <div class="forecast-card">
-                    <div class="day">Tue</div>
-                    <i class="fas fa-cloud-sun forecast-icon"></i>
-                    <div class="temp">68&#176;F</div>
-                </div>
-                <div class="forecast-card">
-                    <div class="day">Wed</div>
-                    <i class="fas fa-cloud forecast-icon"></i>
-                    <div class="temp">62&#176;F</div>
-                </div>
-                <div class="forecast-card">
-                    <div class="day">Thu</div>
-                    <i class="fas fa-cloud-showers-heavy forecast-icon"></i>
-                    <div class="temp">55&#176;F</div>
-                </div>
-                <div class="forecast-card">
-                    <div class="day">Fri</div>
-                    <i class="fas fa-cloud-rain forecast-icon"></i>
-                    <div class="temp">51&#176;F</div>
-                </div>
-                <div class="forecast-card">
-                    <div class="day">Sat</div>
-                    <i class="fas fa-cloud-meatball forecast-icon"></i>
-                    <div class="temp">49&#176;F</div>
-                </div>
-                <div class="forecast-card">
-                    <div class="day">Sun</div>
-                    <i class="fas fa-sun forecast-icon"></i>
-                    <div class="temp">55&#176;F</div>
+
+        <div class="d-flex flex-column justify-content-around w-75 align-items-center  w-100">
+            <div class="forecast-container  shadow-sm text-white rounded-5 d-flex flex-column">
+                <h1>Tomorrow forecast</h1>
+                <div class="wrapper d-flex  text-center overflow-auto w-100" id="forecast-wrapper">
+               
+
+                    
+
+                   
                 </div>
             </div>
-            <div class="d-flex flex-column align-items-center gap-5">
-                
+            
+            <div class="d-flex flex-column align-items-center gap-5 mt-5">
+
                 <h1 class="text-white">Today's Highlights</h1>
                 <div class="weather-details-container container row">
-                    <div class="weather-detail-card col-md-3 gap-">
+                    <div class="weather-detail-card col-md-3">
                         <div class="weather-detail-icon">
                             <i class="wi wi-humidity"></i>
                         </div>
-                        <div class="weather-detail-info">
+                        <div class="weather-detail-info text-center w-100">
                             <div class="weather-detail-label">Humidity</div>
-                            <div class="weather-detail-value">56%</div>
+                            <div class="weather-detail-value" id="humidity">56%</div>
                         </div>
                     </div>
 
@@ -88,39 +72,9 @@
                         <div class="weather-detail-icon">
                             <i class="wi wi-strong-wind"></i>
                         </div>
-                        <div class="weather-detail-info">
+                        <div class="weather-detail-info w-100">
                             <div class="weather-detail-label">Wind</div>
-                            <div class="weather-detail-value">11 km/h</div>
-                        </div>
-                    </div>
-    
-                    <div class="weather-detail-card col-md-3">
-                        <div class="weather-detail-icon">
-                            <i class="wi wi-strong-wind"></i>
-                        </div>
-                        <div class="weather-detail-info">
-                            <div class="weather-detail-label">Wind</div>
-                            <div class="weather-detail-value">11 km/h</div>
-                        </div>
-                    </div>
-    
-                    <div class="weather-detail-card col-md-3">
-                        <div class="weather-detail-icon">
-                            <i class="wi wi-strong-wind"></i>
-                        </div>
-                        <div class="weather-detail-info">
-                            <div class="weather-detail-label">Wind</div>
-                            <div class="weather-detail-value">11 km/h</div>
-                        </div>
-                    </div>
-    
-                    <div class="weather-detail-card col-md-3">
-                        <div class="weather-detail-icon">
-                            <i class="wi wi-strong-wind"></i>
-                        </div>
-                        <div class="weather-detail-info">
-                            <div class="weather-detail-label">Wind</div>
-                            <div class="weather-detail-value">11 km/h</div>
+                            <div class="weather-detail-value" id="wind">11 km/h</div>
                         </div>
                     </div>
 
@@ -128,16 +82,46 @@
                         <div class="weather-detail-icon">
                             <i class="wi wi-strong-wind"></i>
                         </div>
-                        <div class="weather-detail-info">
-                            <div class="weather-detail-label">Wind</div>
-                            <div class="weather-detail-value">11 km/h</div>
+                        <div class="weather-detail-info w-100">
+                            <div class="weather-detail-label">Presure</div>
+                            <div class="weather-detail-value" id="presure">11 km/h</div>
                         </div>
                     </div>
-    
-                    
+
+                    <div class="weather-detail-card col-md-3">
+                        <div class="weather-detail-icon">
+                            <i class="wi wi-strong-wind"></i>
+                        </div>
+                        <div class="weather-detail-info w-100">
+                            <div class="weather-detail-label">Visibility</div>
+                            <div class="weather-detail-value" id="visibility">11 km/h</div>
+                        </div>
+                    </div>
+
+                    <div class="weather-detail-card col-md-3">
+                        <div class="weather-detail-icon">
+                            <i class="wi wi-strong-wind"></i>
+                        </div>
+                        <div class="weather-detail-info w-100">
+                            <div class="weather-detail-label">Uv</div>
+                            <div class="weather-detail-value" id="uv">11 km/h</div>
+                        </div>
+                    </div>
+
+                    <div class="weather-detail-card col-md-3">
+                        <div class="weather-detail-icon">
+                            <i class="wi wi-strong-wind"></i>
+                        </div>
+                        <div class="weather-detail-info w-100">
+                            <div class="weather-detail-label">feelslike</div>
+                            <div class="weather-detail-value" id="feel">11 km/h</div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
-           
+
         </div>
 
     </div>
