@@ -16,7 +16,7 @@ const image = document.querySelector('#image');
 const dayBtns = document.getElementById("day-btns");
 
 
-locationInput.value = 'ottawa'
+locationInput.value = 'montreal'
 getData();
 
 
@@ -24,6 +24,7 @@ searchButton.addEventListener('click',getData);
 
  function getData(){
      let locationVar = locationInput.value;
+     forecast.innerHTML = "";
     const options = {
 	method: 'GET',
 	headers: {
