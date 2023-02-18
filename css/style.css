@@ -40,7 +40,6 @@
 .weather-icon img{
     color: #fff;
     width: 100px;
-    margin-top: 50px;
 }
 
 .desc{
@@ -64,6 +63,7 @@
 
 .ilus img{
     width: 300px;
+    margin-top: 50px;
 }
 .weather-info .temp {
     font-size: 4rem;
