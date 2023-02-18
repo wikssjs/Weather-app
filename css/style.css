@@ -40,6 +40,7 @@
 .weather-icon img{
     color: #fff;
     width: 100px;
+    margin-top: 50px;
 }
 
 .desc{
